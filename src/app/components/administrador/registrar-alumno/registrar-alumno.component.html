@@ -76,16 +76,18 @@
                         <th scope="col">Sexo</th>
                         <th scope="col">FechaNaci</th>
                         <th scope="col">Direccion</th>
-                    
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    <tr *ngFor="let elemento of alumnos; index as i">
+                        <td>{{elemento.codigoA}}</td>
+                        <td>{{elemento.nombre}}</td>
+                        <td>{{elemento.apellidoP}}</td>
+                        <td>{{elemento.apellidoM}}</td>
+                        <td>{{elemento.sexo}}</td>
+                        <td>{{elemento.fechaNacimiento}}</td>
+                        <td>{{elemento.direccion}}</td>
                         <td>
                             <button type="button" class="btn btn-warning">EDITAR</button>
                             <button type="button" class="btn btn-danger">ELIMINAR</button>

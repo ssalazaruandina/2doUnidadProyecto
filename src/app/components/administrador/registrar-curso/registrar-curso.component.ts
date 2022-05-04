@@ -16,5 +16,19 @@ export class RegistrarCursoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cursoVacio(): Curso{
+    return {
+      codigo:"",
+      nombre:"",
+      descripcion:""
+    }
+  }
+
+  cursoAux = this.cursoVacio();
+
+  onAgregarCurso():void{
+    this.listaCursos.push(this.cursoAux);
+    this.cursoAux = this.cursoVacio();
+  }
 
 }

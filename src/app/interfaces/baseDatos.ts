@@ -15,7 +15,7 @@ export let alumnos: Alumno[] = [
         dni: "12345678",
         sexo: "Masculino",
         fechaNacimiento: "2014-05-21",
-        direccion: "av. El Molino Rojo"
+        direccion: "av. El Molino"
     },
     {
         codigoA: "A124",

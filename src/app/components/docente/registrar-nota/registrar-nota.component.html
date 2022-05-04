@@ -8,15 +8,14 @@
                 <h2>PUBLICAR NOTAS</h2>
                 <p>Grado: 5to Primaria</p>
             </div>
-
             <div class="container-fluid">
                 <nav class="navbar navbar-light bg-light">
                     <div class="d-flex">
-                        <!-- <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"
                             [(ngModel)]="alumnoBuscado" (keyup)="onBuscar()">
-                        <button class="btn btn-outline-success" type="submit" (click)="onBuscar()">Buscar</button> -->
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        <button class="btn btn-outline-success" type="submit" (click)="onBuscar()">Buscar</button>
+                        <!-- <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button> -->
                     </div>
                 </nav>
                 <!-- <div *ngIf="validar==true; else tabla"> -->
@@ -65,19 +64,19 @@
                                     <th scope="col">Nombres</th>
                                     <th scope="col">Apellido P</th>
                                     <th scope="col">Apellido M</th>
-                                    <th scope="col">Nota 1 </th>
+                                    <!-- <th scope="col">Nota 1 </th>
                                     <th scope="col">Nota 2</th>
-                                    <th scope="col">Nota 3</th>
+                                    <th scope="col">Nota 3</th> -->
                                     <th scope="col">Promedio Final</th>
                                     <th scope="col">Modificar notas</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <!-- <tr>
                                     <th> aeaeae </th>
                                     <td>XDD</td>
-                                </tr>
-                                <!-- <tr *ngFor="let elemento of notas; index as i">
+                                </tr> -->
+                                <tr *ngFor="let elemento of notas; index as i">
                                     <th scope="row">{{elemento.alumno.codA}}</th>
                                     <td>{{elemento.alumno.DniA}}</td>
                                     <td>{{elemento.alumno.nombreA}}</td>
@@ -90,14 +89,14 @@
                                     <td><button class="btn btn-danger" (click)="guardarPos(i)" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal"><i class="fa-solid fa-file-pen"></i></button>
                                     </td>
-                                </tr> -->
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </ng-template>
                 <div class="d-md-flex justify-content-md-end">
-                    <!-- <button class="btn btn-primary me-md-2" type="button" (click)="onConfirmar()">CONFIRMAR NOTAS</button> -->
-                    <button class="btn btn-primary me-md-2" type="button">CONFIRMAR NOTAS</button>
+                    <button class="btn btn-primary me-md-2" type="button" (click)="onConfirmar()">CONFIRMAR NOTAS</button>
+                    <!-- <button class="btn btn-primary me-md-2" type="button">CONFIRMAR NOTAS</button> -->
                 </div>
             </div>
 
@@ -114,40 +113,40 @@
                             <div class="row">
                                 <div class="col">
                                     <label for="First name">Primera parcial</label>
-                                    <!-- <input type="number" class="form-control" placeholder="Nota 1"
-                                        [(ngModel)]="parcial1" min="0" max="20" aria-label="First name"> -->
                                     <input type="number" class="form-control" placeholder="Nota 1"
-                                        min="0" max="20" aria-label="First name">
+                                        [(ngModel)]="parcial1" min="0" max="20" aria-label="First name">
+                                    <!-- <input type="number" class="form-control" placeholder="Nota 1"
+                                        min="0" max="20" aria-label="First name"> -->
                                 </div>
                                 <div class="col">
                                     <label for="First name">Segunda parcial</label>
-                                    <!-- <input type="number" class="form-control" placeholder="Nota 1"
-                                        [(ngModel)]="parcial2" min="0" max="20" aria-label="First name"> -->
                                     <input type="number" class="form-control" placeholder="Nota 1"
-                                        min="0" max="20" aria-label="First name">
+                                        [(ngModel)]="parcial2" min="0" max="20" aria-label="First name">
+                                    <!-- <input type="number" class="form-control" placeholder="Nota 1"
+                                        min="0" max="20" aria-label="First name"> -->
                                 </div>
                                 <div class="col">
                                     <label for="First name">Tercera parcial</label>
-                                    <!-- <input type="number" class="form-control" placeholder="Nota 1"
-                                        [(ngModel)]="parcial3" min="0" max="20" aria-label="First name"> -->
                                     <input type="number" class="form-control" placeholder="Nota 1"
-                                        min="0" max="20" aria-label="First name">
+                                        [(ngModel)]="parcial3" min="0" max="20" aria-label="First name">
+                                    <!-- <input type="number" class="form-control" placeholder="Nota 1"
+                                        min="0" max="20" aria-label="First name"> -->
                                 </div>
                                 <div class="col">
                                     <label for="First name">Nota final</label>
-                                    <!-- <input type="text" class="form-control" placeholder="Nota final" [value]="total"
-                                        aria-label="First name" readonly> -->
-                                    <input type="text" class="form-control" placeholder="Nota final"
+                                    <input type="text" class="form-control" placeholder="Nota final" [value]="total"
                                         aria-label="First name" readonly>
+                                    <!-- <input type="text" class="form-control" placeholder="Nota final"
+                                        aria-label="First name" readonly> -->
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                                 (click)="guardarNota()">Cerrar y guardar</button>
-                            <button type="button" class="btn btn-primary" (click)="onPromedio()">Generar nota</button> -->
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar y guardar</button>
-                            <button type="button" class="btn btn-primary">Generar nota</button>
+                            <button type="button" class="btn btn-primary" (click)="onPromedio()">Generar nota</button>
+                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar y guardar</button>
+                            <button type="button" class="btn btn-primary">Generar nota</button> -->
                         </div>
                     </div>
                 </div>

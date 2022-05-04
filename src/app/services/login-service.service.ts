@@ -12,7 +12,9 @@ export class LoginServiceService {
   private Docentes:Docente[] = docentes;
   private administradores:Administrador[] = administradores;
   private indice:number = 0;
+
   constructor() { }
+  
   buscarRol(usuario:string, contrasenia:string): number{
     for(let i = 0 ; i < this.Alumnos.length; i++){
       if(this.Alumnos[i].usuario == usuario && this.Alumnos[i].contrasenia == contrasenia){
@@ -22,6 +24,7 @@ export class LoginServiceService {
     }
     return -1;
   }
+  
   getDatosAlumno(): Alumno{
     return this.Alumnos[this.indice];
   }

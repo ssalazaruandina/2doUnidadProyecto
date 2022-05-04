@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Alumno } from 'src/app/interfaces/alumno';
+import { alumnos } from '../../../interfaces/baseDatos'
 
 @Component({
   selector: 'app-registrar-alumno',
@@ -13,7 +14,7 @@ export class RegistrarAlumnoComponent implements OnInit {
   ngOnInit(): void {
   }
   public alumno: Alumno = this.AlumnoVacio();
-  public alumnos: Alumno[] = [];
+  public alumnos: Alumno[] = alumnos;
   AlumnoVacio(): Alumno {
     return {
       codigoA:"",

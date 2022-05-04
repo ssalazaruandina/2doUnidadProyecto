@@ -8,5 +8,6 @@ export interface Alumno{
     dni:string,
     sexo:string,
     fechaNacimiento:string,
-    direccion:string
+    direccion:string,
+    nota?:number
 }
