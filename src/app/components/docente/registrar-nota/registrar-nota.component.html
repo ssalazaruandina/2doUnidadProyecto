@@ -14,8 +14,6 @@
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"
                             [(ngModel)]="alumnoBuscado" (keyup)="onBuscar()">
                         <button class="btn btn-outline-success" type="submit" (click)="onBuscar()">Buscar</button>
-                        <!-- <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button> -->
                     </div>
                 </nav>
                 <div *ngIf="validar==true;else tablas">
@@ -30,9 +28,6 @@
                                     <th scope="col">Nombres</th>
                                     <th scope="col">Apellido P</th>
                                     <th scope="col">Apellido M</th>
-                                    <!-- <th scope="col">Nota 1 </th>
-                                    <th scope="col">Nota 2</th>
-                                    <th scope="col">Nota 3</th> -->
                                     <th scope="col">Promedio Final</th>
                                     <th scope="col">Modificar notas</th>
                                 </tr>
@@ -66,9 +61,6 @@
                                     <th scope="col">Nombres</th>
                                     <th scope="col">Apellido P</th>
                                     <th scope="col">Apellido M</th>
-                                    <!-- <th scope="col">Nota 1 </th>
-                                    <th scope="col">Nota 2</th>
-                                    <th scope="col">Nota 3</th> -->
                                     <th scope="col">Promedio Final</th>
                                     <th scope="col">Modificar notas</th>
                                 </tr>
@@ -92,7 +84,6 @@
                 </ng-template>
                 <div class="d-md-flex justify-content-md-end">
                     <button class="btn btn-primary me-md-2" type="button" (click)="onConfirmar()">CONFIRMAR NOTAS</button>
-                    <!-- <button class="btn btn-primary me-md-2" type="button">CONFIRMAR NOTAS</button> -->
                 </div>
             </div>
 
@@ -111,29 +102,21 @@
                                     <label for="First name">Primera parcial</label>
                                     <input type="number" class="form-control" placeholder="Nota 1"
                                         [(ngModel)]="parcial1" min="0" max="20" aria-label="First name">
-                                    <!-- <input type="number" class="form-control" placeholder="Nota 1"
-                                        min="0" max="20" aria-label="First name"> -->
                                 </div>
                                 <div class="col">
                                     <label for="First name">Segunda parcial</label>
                                     <input type="number" class="form-control" placeholder="Nota 1"
                                         [(ngModel)]="parcial2" min="0" max="20" aria-label="First name">
-                                    <!-- <input type="number" class="form-control" placeholder="Nota 1"
-                                        min="0" max="20" aria-label="First name"> -->
                                 </div>
                                 <div class="col">
                                     <label for="First name">Tercera parcial</label>
                                     <input type="number" class="form-control" placeholder="Nota 1"
                                         [(ngModel)]="parcial3" min="0" max="20" aria-label="First name">
-                                    <!-- <input type="number" class="form-control" placeholder="Nota 1"
-                                        min="0" max="20" aria-label="First name"> -->
                                 </div>
                                 <div class="col">
                                     <label for="First name">Nota final</label>
                                     <input type="text" class="form-control" placeholder="Nota final" [value]="total"
                                         aria-label="First name" readonly>
-                                    <!-- <input type="text" class="form-control" placeholder="Nota final"
-                                        aria-label="First name" readonly> -->
                                 </div>
                             </div>
                         </div>
@@ -141,8 +124,6 @@
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                                 (click)="guardarNota()">Cerrar y guardar</button>
                             <button type="button" class="btn btn-primary" (click)="onPromedio()">Generar nota</button>
-                            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar y guardar</button>
-                            <button type="button" class="btn btn-primary">Generar nota</button> -->
                         </div>
                     </div>
                 </div>

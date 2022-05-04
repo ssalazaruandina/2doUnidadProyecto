@@ -8,13 +8,13 @@ import { cursos } from '../../../interfaces/baseDatos'
   styleUrls: ['./registrar-curso.component.css']
 })
 export class RegistrarCursoComponent implements OnInit {
-
-  listaCursos: Curso[] = cursos;
   
   constructor() { }
 
   ngOnInit(): void {
   }
+   
+  listaCursos: Curso[] = cursos;
 
   cursoVacio(): Curso{
     return {
