@@ -15,7 +15,8 @@ export let alumnos: Alumno[] = [
         dni: "12345678",
         sexo: "Masculino",
         fechaNacimiento: "2014-05-21",
-        direccion: "av. El Molino"
+        direccion: "av. El Molino",
+        nota:0
     },
     {
         codigoA: "A124",
@@ -27,7 +28,8 @@ export let alumnos: Alumno[] = [
         dni: "43267890",
         sexo: "Masculino",
         fechaNacimiento: "2014-02-10",
-        direccion: "Av. La cultura"
+        direccion: "Av. La cultura",
+        nota:0
     },
     {
         codigoA: "A125",
@@ -39,7 +41,8 @@ export let alumnos: Alumno[] = [
         dni: "21566734",
         sexo: "Femenino",
         fechaNacimiento: "2015-08-14",
-        direccion: "Av. El Sol"
+        direccion: "Av. El Sol",
+        nota:0
     }
 ];
 export let docentes: Docente[] = [

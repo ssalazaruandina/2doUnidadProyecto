@@ -51,19 +51,23 @@ export class RegistrarNotaComponent implements OnInit {
   public validar:boolean = false;
   public alumnoBuscado: string = "";
   public alumnoBuscadoTotal: Alumno = {
-    codigo: "",
+    codigoA:"",
     usuario:"",
-    dni: "",
+    contrasenia:"",
     nombre: "",
-    apellido: "",
-    contrasenia: "",
-    nota: 0
+    apellidoP: "",
+    apellidoM:"",
+    dni:"",
+    sexo:"",
+    fechaNacimiento:"",
+    direccion:"",
+    nota:0
 }
   public numro: number = -1;
 
   onBuscar(){
     for(let i=0;i<this.lista.length;i++){
-      if(this.lista[i].codigo==this.alumnoBuscado){
+      if(this.lista[i].codigoA==this.alumnoBuscado){
         console.log("El alumno es " + this.lista[i].nombre)
         this.validar=true;
         this.alumnoBuscadoTotal=this.lista[i];
@@ -74,9 +78,5 @@ export class RegistrarNotaComponent implements OnInit {
       }
     }
   }
-
-}
-
-
 
 }
